@@ -1,0 +1,102 @@
+#full-body {
+    background-color: #f4f4f4;
+    background-size: cover;
+    /* background-position: center; */
+height: 105vh;
+overflow: hidden;
+}
+
+.m0 {
+    margin: 0;
+}
+
+.field {
+    width: 100%;
+   
+    
+  box-sizing: border-box;
+}
+
+
+.box {
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    border-radius: 7px;
+    border-style: solid;
+    margin-top: 80px;
+    height: 73vh;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    background-color: white;
+
+}
+
+.box1 {
+
+
+    text-align: center;
+    width: 400px;
+    height: 70vh;
+
+    border-right: 0.3px solid black;
+   
+
+}
+
+.box2 {
+  
+    height: 69.5vh;
+
+    
+}
+
+.img {
+    height: 99%;
+
+}
+
+.heading{
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.field1{
+    display: flex;
+}
+
+.btn{
+    margin-left: 50px;
+    margin-right: 50px;
+    border-radius: 40px;
+}
+
+p{
+    font-size:medium;
+}
+
+a{
+    font-weight: bold;
+}
+/* 
+  ::ng-deep .mat-mdc-text-field-wrapper  {
+    background-color: white;
+    
+  } */
+
+  .contactUs{
+    margin-top: 530px;
+   
+    
+    
+  }
+
+  ::ng-deep .mat-mdc-icon-button .eye{
+    color: black !important;
+    width: 20px;
+   
+  }
+  .eye{
+    margin-right: 15px;
+    margin-bottom: 10px;
+    
+  }

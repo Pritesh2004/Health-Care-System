@@ -1,0 +1,159 @@
+<app-navbar></app-navbar>
+  <div class="bootstrap-wrapper " id="full-body">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-lg-12 box">
+          <div class="row">
+            <div class="col-lg-6 box1">
+              <img src="../../../assets/images/signup.png" alt="signup" class="img">
+            </div>
+            <div class="col-lg-6 box2 ">
+              <div class="text-center mt50">
+                <p class="heading">Signup Here!</p>
+              </div>
+              <form #signupForm="ngForm" (ngSubmit)="formSubmit(signupForm)">
+
+                <div class="row mt30 ">
+                  <div class="col-lg-12   field1">
+                    <!-- First Name Field -->
+                    <mat-form-field appearance="outline" class="ml20 mr10 field">
+                      <mat-label>First Name</mat-label>
+                      <input type="text" required #firstName="ngModel" [(ngModel)]="user.firstName" name="firstName"
+                        matInput placeholder="First Name">
+                      <mat-error *ngIf="firstName.invalid && (firstName.touched ||firstName.dirty) ">
+                        First Name is required
+                      </mat-error>
+                    </mat-form-field>
+
+                    <!-- Last Name Field -->
+                    <mat-form-field appearance="outline" class="field mr20 ml10">
+                      <mat-label>Last Name</mat-label>
+                      <input type="text" required #lastName="ngModel" [(ngModel)]="user.lastName" name="lastName"
+                        matInput placeholder="Last Name">
+                      <mat-error *ngIf="lastName.invalid && (lastName.touched ||lastName.dirty)">
+                        Last Name is required
+                      </mat-error>
+                    </mat-form-field>
+                  </div>
+
+                </div>
+
+                <div class="row ">
+                  <div class="col-lg-8 field1">
+                    <!-- Email field -->
+                    <mat-form-field appearance="outline" class="field ml20 ">
+                      <mat-label>Email</mat-label>
+                      <input type="email" required #email="ngModel" email [(ngModel)]="user.email" name="email" matInput
+                        placeholder="Email">
+
+                      <mat-error *ngIf="email.errors?.['required']">Email is required</mat-error>
+                      <mat-error *ngIf="email.errors?.['email']">Invalid email format</mat-error>
+
+                    </mat-form-field>
+                  </div>
+                  <div class="col-lg-4">
+                    <mat-form-field class="field1 mr20">
+                      <mat-label>Gender</mat-label>
+                      <mat-select #gender="ngModel" name="gender"
+                          [(ngModel)]="user.gender" required>
+                          <mat-option value="Male">Male</mat-option>
+                          <mat-option value="Female">Female</mat-option>
+                      </mat-select>
+                      <mat-error *ngIf="gender.errors?.['required']">Gender is required</mat-error>
+
+                  </mat-form-field>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 field1">
+                    <!-- UserName field -->
+                    <!-- <mat-form-field appearance="outline" class="field ml20 mr10">
+                      <mat-label>User Name</mat-label>
+                      <input type="text" required #username="ngModel" [(ngModel)]="user.username" name="username"
+                        matInput placeholder="User Name">
+                      <mat-error *ngIf="username.invalid && (username.touched ||username.dirty)">
+                        UserName is required
+                      </mat-error>
+                    </mat-form-field> -->
+
+                    <!-- Phone No field -->
+                    <mat-form-field appearance="outline" class="field mr20 ml10">
+                      <mat-label>Phone no</mat-label>
+                      <input type="number" required #phone="ngModel" pattern="[0-9]{10}" [(ngModel)]="user.phone"
+                        name="phone" matInput placeholder="Phone No">
+
+                      <mat-error *ngIf="phone.errors?.['required']">Phone Number is required</mat-error>
+                      <mat-error *ngIf="phone.errors?.['pattern']">Invalid phone number format (10 digits
+                        required)</mat-error>
+
+                    </mat-form-field>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 field1">
+                    <!-- Password field -->
+                    <mat-form-field appearance="outline" class="field ml20 mr10">
+                      <mat-label>Password</mat-label>
+                      <input [type]="hide ? 'password' : 'text'" required #password="ngModel" minlength="6"
+                        maxlength="20" [(ngModel)]="user.password" name="password" matInput placeholder="Password">
+                      <button class="eye" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon class="eye">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+                      <!-- <mat-error *ngIf="signupForm.controls['password'].hasError('strongPassword')">Password is not strong</mat-error> -->
+                      <mat-error *ngIf="password.errors?.['required']">Password is required</mat-error>
+                      <mat-error *ngIf="password.errors?.['minlength']">Password must be at least 6
+                        characters</mat-error>
+                      <mat-error *ngIf="password.errors?.['maxlength']">Password must be at most 20
+                        characters</mat-error>
+
+                    </mat-form-field>
+
+                    <!-- Confirm Password field -->
+                    <mat-form-field appearance="outline" class="field mr20 ml10">
+                      <mat-label>Confirm Password</mat-label>
+                      <input [type]="hide ? 'password' : 'text'" required #confirmPassword="ngModel" minlength="6"
+                        maxlength="20" name="confirmPassword" [(ngModel)]="user.confirmPassword" matInput
+                        placeholder="Confirm Password">
+                      <button class="eye" mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon class="eye">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                      </button>
+
+                      <mat-error *ngIf="confirmPassword.errors?.['required']">Confirm password is required</mat-error>
+                      <!-- <mat-error *ngIf="signupForm.controls['confirmPassword'].hasError('passwordMismatch')">
+                  Passwords do not match.</mat-error> -->
+
+                    </mat-form-field>
+                  </div>
+
+                </div>
+
+                <div class="row">
+                  <div class="col-lg-12 field1"> <button [disabled]="signupForm.invalid" type="submit" mat-raised-button
+                      color="primary" class=" btn field ml20 mr20">SignUp</button></div>
+                </div>
+                <div class="row">
+                  <div class="col-lg-12 text-center mt10">
+                    <p>Already Registered? <a routerLink="/login">Login here</a></p>
+                  </div>
+                </div>
+
+
+              </form>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+      </div>
+     
+   
+
+  </div>

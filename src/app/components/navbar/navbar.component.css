@@ -1,0 +1,138 @@
+.spacer{
+    flex: 1 1 auto;
+    
+}
+
+.bar{
+    background-color:#311B92;
+    
+   
+   
+}
+.fixed{
+    position: fixed;
+    width: 100%;
+    transition: 0.2s linear;
+    top: 0px;
+    z-index: 9;
+    background-color: #311B92;
+}
+.nofixed{
+    position: static;
+    transition: 0.2s linear;
+    top:-50px;
+}
+
+.linked{
+    /* color: white; */
+    margin-right: 20px;
+    font-size: 24px;
+    font-weight: 500;
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ .fixed a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ .fixed a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:active {
+    color: red;
+    background-color: transparent;
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+.links{
+    /* position: absolute;
+    right: 70px; */
+    display: flex;
+    
+    margin-top: 20px;
+   
+}
+
+.links2{
+    margin-top: 22px;
+    
+}
+
+.title{
+    display: flex;
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+.fixed #title2{
+    color: white;
+}
+.fixed #title1{
+    color: #D1C4E9;
+}
+#title1{
+    font-size: 40px;
+    color: #D1C4E9;
+
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+
+}
+
+#title2{
+    margin-left: 5px;
+    margin-top: 10px;
+    color: white;
+font-size: 30px;
+font-style: normal;
+font-weight:600;
+line-height: normal;
+}
+.profile{
+margin-right: 10px;
+width: 40px;
+height: 40px;
+}
+
+.profile-icon{
+    margin-bottom: 30px;
+    margin-right: 30px;
+}
+.menu {
+    width: 400px;
+}
+::ng-deep .mdc-button__label{
+    color: white !important;
+}
+::ng-deep .material-icons, .mdc-icon-button{
+    font-size: 35px !important;
+    
+ }
+
+ .fixed ::ng-deep .material-icons{
+    color: white;
+ }
+ 
+ ::ng-deep .mat-icon{
+     height: 50px !important;
+     width: 50px!important;
+     overflow:visible !important;
+     color: white;
+ }
+
+ ::ng-deep .mdc-button {
+background-color: #311B92 !important;
+ }

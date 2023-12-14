@@ -1,0 +1,86 @@
+.side-bar{
+  width: 100%;
+  background-color:#FAF6FF;
+  height: 91vh;
+  border-right: 0.1px solid rgb(100, 73, 255);
+}
+.profile{
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  place-items: center;
+}
+#dr_name{
+  color: #311B92;
+  margin-top: 10px;
+  font-size: 25px;
+  font-weight: bold;
+}
+#dr_specialty{
+  padding: 0;
+  margin-top: 0;
+  margin-bottom:10px;
+  
+  font-size: 20px;
+  font-weight: 400;
+}
+.example-container {
+  height: 400px;
+  width: 1000px;
+  max-width: 100%;
+  overflow: auto;
+}
+
+table {
+  width: 1200px;
+}
+
+td.mat-column-star {
+  width: 20px;
+  padding-right: 8px;
+}
+
+th.mat-column-position, td.mat-column-position {
+  padding-left: 8px;
+}
+
+.mat-mdc-table-sticky-border-elem-right {
+  border-left: 1px solid #e0e0e0;
+}
+
+.mat-mdc-table-sticky-border-elem-left {
+  border-right: 1px solid #e0e0e0;
+}
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+
+  #approved{
+    color: rgb(0, 155, 0);
+   font-weight: bold;
+   font-size: 17px;
+}
+
+#rejected{
+    color: rgb(155, 0, 0);
+   font-weight: bold;
+   font-size: 17px;
+}
+
+.table{
+  margin-left: 105px;
+  margin-top: 50px;
+}
+
+#search{
+  width: 100%;
+}
+
+.heading{
+  text-align: center;
+  font-size: 35px;
+  font-weight: bold;
+}

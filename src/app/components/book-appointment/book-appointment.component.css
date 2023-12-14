@@ -1,0 +1,111 @@
+.full-width{
+ 
+  height: 160vh;
+}
+
+.box {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.4)), url(./../../../assets/images/appointment-bg.jpg);
+    
+    /* filter:brightness(50%); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+
+}
+
+.heading {
+    color: white;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 60px;
+    margin-bottom: 25px;
+    font-size:38px;
+    font-weight:400;
+}
+
+.box0 {
+    margin-bottom: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+    height: 60%;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 5px solid transparent;
+    border-radius: 10px;
+
+
+
+
+}
+.field{
+   
+   margin-left:10px;
+   margin-right:20px;
+}
+
+.field1{
+    margin-left: 20px;
+    width: 410px;
+    
+}
+
+.field0{
+  margin-left: 20px;
+  width: 97%;
+  
+}
+
+.reason{
+    margin-left: 20px;
+    
+    width: 97%;
+    height: 140px;
+}
+
+.btn{
+  font-size: 21px;
+  font-weight:400;
+  height: 45px;
+}
+
+
+::ng-deep .mat-mdc-text-field-wrapper  {
+    background-color:rgba(0, 0, 0, 0.3);
+    color:white;
+    
+    
+  }
+
+  ::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-floating-label{
+    color: white !important;
+  }
+
+  ::ng-deep .mdc-text-field--filled:not(.mdc-text-field--disabled){
+    background-color:rgba(0, 0, 0, 0.3);
+  }
+
+  ::ng-deep .mdc-text-field:not(.mdc-text-field--disabled) .mdc-text-field__input{
+    color: white;
+  }
+
+  ::ng-deep .mat-mdc-select-value{
+    color: white;
+  }
+
+  ::ng-deep .mat-datepicker-toggle, .mat-datepicker-content .mat-calendar-next-button, .mat-datepicker-content .mat-calendar-previous-button {
+    color: white;
+  }
+
+  ::ng-deep  .mat-mdc-select-arrow {
+    color: white;
+  }
+
+  ::ng-deep  .mat-mdc-form-field-hint{
+    color: white;
+  } 
+  ::ng-deep .mat-mdc-raised-button.mat-primary{
+    --mdc-protected-button-container-color: #311B92;
+
+}

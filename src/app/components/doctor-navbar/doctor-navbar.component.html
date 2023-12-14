@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+<mat-toolbar-row >
+  <div class="title">
+    <p id="title1">Health</p>
+    <p id="title2">Care</p>
+</div>
+    <span class="example-spacer"></span>
+    
+    <a *ngIf="loggedIn" (click)="logoutUser()" mat-raised-button color="accent">LogOUt</a>
+  </mat-toolbar-row>
+</mat-toolbar>

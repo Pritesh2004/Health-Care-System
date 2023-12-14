@@ -1,0 +1,97 @@
+<app-navbar></app-navbar>
+<div class="bootstrap-wrapper full-width">
+    <div class="box">
+        <p class="text-center heading">Doctor Appointment</p>
+        <div class="row  box0">
+            <div class="col">
+                <!-- {{bookAppointment.value | json}} -->
+                <form #bookAppointment="ngForm" (ngSubmit)="onSubmit(bookAppointment)">
+                    <div class="row" class="mt30">
+                        <div class="col-lg-12">
+
+
+                            <div class="row field">
+
+                                <div class="col-lg-12">
+                                    <mat-form-field class="field0">
+                                        <mat-label>Select Doctor</mat-label>
+                                        <mat-select aria-required="true" #dr_name="ngModel" name="dr_firstName"
+                                            [(ngModel)]="patient.dr_name" required>
+                                            <mat-option *ngFor="let doctor of doctors" [value]="doctor.name">{{
+                                                doctor.name }} - {{doctor.speciality}}</mat-option>
+
+                                        </mat-select>
+                                        <mat-error *ngIf="dr_name.errors?.['required']&&dr_name.invalid && (dr_name.touched ||dr_name.dirty) ">
+                                            Doctor is required
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row field">
+                                <div class="col-lg-6">
+                                    <mat-form-field class="field1">
+                                        <mat-label>Choose a date</mat-label>
+                                        <input required #appointment_date="ngModel" name="appointment_date"
+                                            [(ngModel)]="patient.appointment_date" matInput [matDatepicker]="picker">
+                                        <mat-hint>MM/DD/YYYY</mat-hint>
+                                        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+                                        <mat-datepicker #picker></mat-datepicker>
+                                        <mat-error
+                                            *ngIf="appointment_date.errors?.['required']&&appointment_date.invalid && (appointment_date.touched ||appointment_date.dirty) ">
+                                            Date is required
+                                        </mat-error>
+                                    </mat-form-field>
+
+                                </div>
+                                <div class="col-lg-6">
+                                    <mat-form-field class="field1">
+                                        <mat-label>Time Slot</mat-label>
+                                        <mat-select aria-required="true" #appointment_time="ngModel"
+                                            name="appointment_time" [(ngModel)]="patient.appointment_time" required>
+                                            <mat-option value="10 - 11">10 Am - 11 Am</mat-option>
+                                            <mat-option value="11 - 12">11 Am - 12 Am</mat-option>
+                                            <mat-option value="12 - 1">12 Am - 01 Pm</mat-option>
+                                            <mat-option value="2 - 3">02 Pm - 03 Pm</mat-option>
+                                            <mat-option value="3 - 4">03 Pm - 04 Pm</mat-option>
+                                            <mat-option value="4 - 5">04 Pm - 05 Pm</mat-option>
+                                            <mat-option value="5 - 6">05 Pm - 06 Pm</mat-option>
+                                        </mat-select>
+                                        <mat-error
+                                            *ngIf="appointment_time.errors?.['required'] && appointment_time.invalid && (appointment_time.touched ||appointment_time.dirty) ">
+                                            Time is required
+                                        </mat-error>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row field">
+                                <div class="col-lg-12 ">
+                                    <mat-form-field class=" reason">
+                                        <mat-label>Reason for your visit</mat-label>
+                                        <textarea name="reason" [(ngModel)]="patient.reason" matInput
+                                            placeholder="Ex. It makes me feel..."></textarea>
+                                    </mat-form-field>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-12 text-center">
+                                    <button type="submit" [disabled]="bookAppointment.invalid" mat-raised-button
+                                        color="primary" class="field1 btn">Book Appointment</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+<div class="bootstrap-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <app-contact-us></app-contact-us>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,109 @@
+<app-navbar></app-navbar>
+<!-- <button (click)="helloWorld()">Say Hello World</button>
+<p>{{message}}</p> -->
+
+<div class="bootstrap-wrapper">
+  <div class="row full-height">
+    <div class="col-lg-12 box">
+      <h1 id="heading">Disease Prediction Using ML</h1>
+      <div class="row">
+        <div class="col-lg-10 box1">
+          <form class="example-form" (ngSubmit)="predict()"> 
+            {{symptoms | json}}
+            <div class="row ">
+              <div class="col-lg-4 ">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter your Symptoms</mat-label>
+                  <input type="text" name="symptom1" [(ngModel)]="symptoms.symptom1" placeholder="Pick one"
+                    aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-lg-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter your Symptoms</mat-label>
+                  <input type="text" name="symptom2" [(ngModel)]="symptoms.symptom2" placeholder="Pick one"
+                    aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-lg-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter your Symptoms</mat-label>
+                  <input type="text" name="symptom3" [(ngModel)]="symptoms.symptom3" placeholder="Pick one"
+                    aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter your Symptoms</mat-label>
+                  <input type="text" name="symptom4" [(ngModel)]="symptoms.symptom4" placeholder="Pick one"
+                    aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-lg-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter your Symptoms</mat-label>
+                  <input type="text" name="symptom5" [(ngModel)]="symptoms.symptom5" placeholder="Pick one"
+                    aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+              <div class="col-lg-4">
+                <mat-form-field class="example-full-width">
+                  <mat-label>Enter your Symptoms</mat-label>
+                  <input type="text" name="symptom6" [(ngModel)]="symptoms.symptom6" placeholder="Pick one"
+                    aria-label="Number" matInput [formControl]="myControl" [matAutocomplete]="auto">
+                  <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+                      {{option}}
+                    </mat-option>
+                  </mat-autocomplete>
+                </mat-form-field>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-lg-12">
+                <button type="submit" class="btn" mat-raised-button color="primary">Predict</button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-12">
+      <app-contact-us></app-contact-us>
+    </div>
+  </div>
+</div>

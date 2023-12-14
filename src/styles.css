@@ -1,0 +1,64 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+.bg-white{
+    background-color: white;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.mb10{
+    margin-bottom: 10px;
+}
+.mt10{
+    margin-top: 10px;
+}
+
+.mt20{
+    margin-top: 20px;
+}
+
+.mt30{
+    margin-top: 30px;
+}
+
+.mt50{
+    margin-top: 50px;
+}
+.ml10{
+    margin-left: 10px;
+}
+
+.mr10{
+    margin-right: 10px;
+}
+
+.mr20{
+    margin-right: 20px;
+}
+
+.ml20{
+    margin-left: 20px;
+}
+
+.mr40{
+    margin-right: 40px;
+}
+
+.ml40{
+    margin-left: 40px;
+}
+
+.mt70{
+    margin-top: 70px;
+}
+
+::ng-deep .mat-mdc-text-field-wrapper  {
+    background-color: white;
+    
+  }

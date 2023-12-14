@@ -1,0 +1,16 @@
+<div class="container">
+  <div [ngClass]="toggleProperty ? 'flipped' : ''" class="card">
+    <div class="front">
+      <ng-content select="flip-card-user"></ng-content>
+      <div class="login-btn" (click)="toggle()">
+        <button  mat-raised-button color="primary">To Doctor Login</button>
+      </div>
+    </div>
+    <div class="back">
+      <ng-content select="flip-card-doctor"></ng-content>
+      <div class="login-btn" (click)="toggle()">
+        <button mat-raised-button color="primary">To User Login</button>
+      </div>
+    </div>
+  </div>
+</div>

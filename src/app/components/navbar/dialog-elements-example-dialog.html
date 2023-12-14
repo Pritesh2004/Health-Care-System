@@ -1,0 +1,33 @@
+<div style="width: 500px;">
+  <!-- <h1 style="text-align: center; font-weight: bold;" mat-dialog-title>Profile</h1> -->
+  <div mat-dialog-content>
+    <div style="text-align: center;">
+      <img src="./../../../assets/images/man.png" width="150px" height="150px">
+    </div>
+    <div style="display: flex;flex-direction: row; place-items: center; justify-content: center; margin-top: 10px;">
+      <p style="font-size: 27px;font-weight: bold; color: black;">{{ user.firstName }}</p>
+      <p style="font-size: 27px;font-weight: bold; margin-left: 5px; color: black;">{{ user.lastName }}</p>
+    </div>
+    <hr>
+    <div>
+      <!-- <div style="display: flex; flex-direction: row;">
+        <p style="font-weight: 800; color: black;">Username : </p>
+        <p style="margin-left: 5px; color: #311B92;"> {{ user.username }}</p>
+      </div> -->
+      <div style="display: flex; flex-direction: row;">
+        <p style="font-weight: 800; color: black;">Email : </p>
+        <p style="margin-left: 5px; color: #311B92;">{{ user.email }}</p>
+      </div>
+      <div style="display: flex; flex-direction: row;">
+        <p style="font-weight: 800; color: black;">Phone : </p>
+        <p style="margin-left: 5px; color: #311B92;">{{ user.phone }}</p>
+      </div>
+    </div>
+
+
+  </div>
+
+  <div style="display: flex; flex-direction: row; justify-content: center; margin-bottom: 10px;" mat-dialog-actions>
+    <button  mat-button mat-dialog-close>Close</button>
+  </div>
+</div>

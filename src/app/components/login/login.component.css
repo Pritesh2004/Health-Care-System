@@ -1,0 +1,118 @@
+#full-body {
+    background-color: #f4f4f4;
+    background-size: cover;
+    background-position: center;
+    height: 105vh;
+    z-index: 10;
+    padding: 0;
+    margin: 0;
+
+
+}
+
+
+.full-width {
+    width: 100%;
+}
+
+.field1 {
+    display: flex;
+}
+
+.box {
+    border-width: 2px;
+    border-color: rgba(255, 255, 255, 0.1);
+
+    border-radius: 7px;
+    border-style: solid;
+    
+    height: 70vh;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+    background-color: white;
+    
+  
+
+}
+
+.box1 {
+    text-align: center;
+    width: 1000px;
+    height: 70vh;
+    border-left: 2px solid black;
+    
+
+
+}
+
+.box2 {
+    height: 69.5vh;
+   
+
+
+}
+
+.box3 {
+
+
+    text-align: center;
+    width: 1000px;
+    height: 69.5vh;
+    border-left: 2px solid black;
+   
+
+}
+
+.box4 {
+    height: 70vh;
+   
+
+
+}
+
+.img {
+    margin-top: 50px;
+    margin-left: 40px;
+    height: 80%;
+
+
+}
+
+
+.heading {
+    font-size: xx-large;
+    font-weight: bolder;
+}
+
+.btn {
+
+    font-size: 15px !important;
+    margin-left: 60px;
+    margin-right: 60px;
+    border-radius: 40px;
+    height: 40px
+}
+
+a {
+    font-weight: bold;
+}
+
+p {
+    font-size: medium;
+}
+
+
+/* ::ng-deep .mat-mdc-text-field-wrapper {
+    background-color: white;
+
+} */
+
+
+::ng-deep .mat-mdc-raised-button.mat-primary {
+    --mdc-protected-button-container-color: #311B92;
+
+}
+
+.contactUs{
+    margin-top: 400px;
+    
+  }

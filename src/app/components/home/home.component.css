@@ -1,0 +1,266 @@
+.full-screen{
+    
+   /* position: absolute; */
+    overflow-x: hidden;
+    width: 100vw;
+    height:409vh;
+}
+
+
+
+.welcomeBox{
+    height: 90vh;
+    width:100vw;
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(./../../../assets/images/welcome.webp);
+    
+    background-repeat: no-repeat;
+    background-size: 100vw 95vh;
+}
+
+.welcomeText{
+    display: flex;
+    margin-top: 140px;
+    margin-left: 115px;
+}
+
+#welcome{
+    color: #ffffff;
+font-family: Inter;
+font-size: 70px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+#health{
+    margin-top: 10px;
+    margin-left: 10px;
+    color: #311B92;
+font-family: Inter;
+font-size: 60px;
+font-style: normal;
+font-weight: 800;
+line-height: normal;
+}
+
+.para{
+    margin-top: 3px;
+    margin-left: 130px;
+}
+
+#para{
+    font-size: 17px;
+    color: white;
+}
+
+.bookBtn{
+    margin-top: 10px;
+    margin-left: 130px;
+}
+
+.btn1{
+
+    width: 300px; height: 50px; font-size: 24px;
+    font-weight: 400 ;
+}
+
+#va-img{
+    margin-top: 60px;
+    margin-left: 120px;
+}
+
+#gva{
+    color: #000;
+text-align: justify;
+font-family: Inter;
+font-size: 45px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+#gva-para{
+    color: #000;
+text-align: justify;
+font-family: Inter;
+font-size: 18px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.au{
+    margin-left: 120px;
+
+   margin-top: 200px;
+
+}
+
+.about-us{
+    margin-top: 50px;
+    margin-left: 40px;
+    margin-bottom: 140px;
+    height: 70vh;
+    background-image: url(./../../../assets/images/about-us.png);
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+
+.va{
+
+    margin-top: 150px;
+}
+
+#doctors{
+    background-color: #FAF6FF;
+    height: 80vh;
+    overflow-x: hidden !important;
+    
+}
+#contactUs{
+    background-color: #311B92;
+    filter:saturate(80%);
+    height: 60vh;
+}
+#doctor-title{
+    margin-top: 10px;
+    text-align: center;
+    color: #000;
+font-family: Inter;
+font-size: 37px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+}
+
+.card{
+    margin: 40px;
+}
+.doctor-card{
+background-color: white;
+height: 330px;
+width: 270px;
+border: 2px black solid;
+box-shadow: 0px 6px 15px rgba(0,0,0,0.5);
+border-radius: 5px;
+
+overflow-y: hidden;
+
+
+}
+.card-heading{
+   
+height: 50px;
+background-color: rgba(0,0,0,0.4);
+position: absolute;
+bottom: 0.001px;
+    display: flex;
+    flex-direction: row;
+    transition: .5s;
+
+}
+.card-avatar{
+    margin-top: 5px;
+    width: 70px;
+    height: 70px;
+}
+.card-title{
+    margin-top: 13px;
+    height: 15px;
+    color: white;
+    display: flex;
+    flex-direction:column;
+}
+h3{
+    font-size: 20px;
+    font-weight: bold;
+}
+p{
+    font-size: 16px;
+    font-weight: 500;
+    opacity: 0;
+}
+
+.doctor-card:hover{
+    cursor: pointer;
+}
+
+.doctor-card:hover .card-heading{
+    height: 100px;
+    background-color: black;
+}
+
+.doctor-card:hover p{
+    opacity: 1;
+    color: white;
+}
+
+.doctor-card:hover h3{
+    color: white;
+}
+
+.doctor-card:hover .card-image{
+    filter: blur(2px);
+    background-image:linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(./.././../../assets/images/dotor.jpg);
+    transform: scale(1.1) rotate(-3deg);
+}
+
+.card-image{
+   
+    height: 330px;
+
+background-size: cover;
+transition: .5s;
+}
+
+#dr1{
+    background-image: url(./.././../../assets/images/dr1.jpg);
+}
+
+#dr2{
+    background-image: url(./.././../../assets/images/dr2.jpg);
+}
+#dr3{
+    background-image: url(./.././../../assets/images/dotor.jpg);
+}
+#dr4{
+    background-image: url(./.././../../assets/images/dr4.jpg);
+}
+
+
+.phone{
+    display: flex;
+    flex-direction: row;
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:active {
+    color: red;
+    background-color: transparent;
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+::ng-deep .mat-mdc-raised-button.mat-primary{
+    --mdc-protected-button-container-color: #311B92;
+
+}
+
+::ng-deep .material-icons{
+   font-size: 35px;
+}
+
+/* ::ng-deep .mat-icon{
+    height: 100% !important;
+    width: 100% !important;
+} */

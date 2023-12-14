@@ -1,0 +1,51 @@
+<mat-toolbar class="bar" (scroll)="onscroll()" [ngClass]="navbarfixed?'fixed':'nofixed'">
+
+    <mat-toolbar-row>
+        <div class="title">
+            <p id="title1">Health</p>
+            <p id="title2">Care</p>
+        </div>
+        <div class="links">
+         
+            <span> <a class="linked" href="/">Home</a></span>
+            <span> <a class="linked" href="#aboutUs">About</a></span>
+            <span> <a class="linked" href="#doctors">Doctors</a></span>
+            <span> <a class="linked" href="#contactUs">Contact Us</a></span>
+
+            <a *ngIf="!loggedIn" class="linked" routerLink="/login">Login</a>
+            <!-- <a *ngIf="loggedIn" >Username</a> -->
+            
+            <!-- <mat-icon *ngIf="loggedIn">account_circle
+            <select name="profile"  *ngIf="loggedIn">
+                <option value="">
+                    
+                    <a >Profile</a>
+                </option>
+                <option value="">
+                    <a (click)="logoutUser()" class="linked">logout</a>
+                </option>
+            </select>
+        </mat-icon> -->
+        </div>
+        <button class="profile" *ngIf="loggedIn" mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+            <mat-icon class="profile-icon">account_circle</mat-icon>
+          </button>
+          <mat-menu #menu="matMenu" class="menu">
+            
+            <button mat-menu-item  (click)="openDialog()"><mat-icon>account_circle</mat-icon>
+              <span>Profile</span></button>
+
+           
+            <button mat-menu-item routerLink="/userAppointments">
+              <mat-icon>library_books</mat-icon>
+              <p >Appointments</p></button>
+              
+              <button mat-menu-item (click)="logoutUser()">
+                <mat-icon>logout</mat-icon>
+                <span >Logout</span>
+              </button>
+  
+          
+          </mat-menu>
+    </mat-toolbar-row>
+</mat-toolbar>

@@ -1,0 +1,117 @@
+<app-navbar></app-navbar>
+<div id="full-body">
+<flip-card>
+  <flip-card-user>
+    <div class="bootstrap-wrapper ">
+      <div class="container">
+        <div class="row box full-width">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 box2 ">
+                <div class="heading text-center mt70">User Login Here!</div>
+                <form  #loginForm="ngForm" (ngSubmit)="onSubmit()">
+                <div class="row mt50">
+                  <div class="col-lg-12  field1">
+                    <mat-form-field appearance="outline" class="full-width ml40 mr40">
+                      <mat-label>Email</mat-label>
+                      <input 
+                      #username="ngModel"
+                      [(ngModel)]="patient.email"
+                      name="email"
+                      required matInput placeholder="Email" >
+                      <mat-error *ngIf="email.errors?.['required']">Email is required</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row mt20">
+                  <div class="col-lg-12 field1">
+                    <mat-form-field appearance="outline" class="full-width ml40 mr40">
+                      <mat-label>Password</mat-label>
+                      <input 
+                      type="password"
+                      #password="ngModel"
+                      [(ngModel)]="patient.password"
+                        name="password"
+                      required matInput placeholder="Password">
+                      <mat-error *ngIf="password.errors?.['required']">Password is required</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row mt20 mb10">
+                  <div class="col-lg-12 field1">
+                    <button [disabled]="loginForm.invalid" type="submit" mat-raised-button color="primary" class="btn full-width">Submit</button>
+                  </div>
+                </div>
+                <p >_____________________________OR_____________________________</p>
+                <div class="row">
+                  <div class="col-lg-12 text-center ">
+                    <p >New to Health Care? <a  routerLink="/signup">Register here</a></p>
+                  </div>
+                </div>
+              </form>
+              </div>
+              <div class="col-lg-6 box1">
+                <img src="../../../assets/images/login122.png" alt="login" class="img">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </flip-card-user>
+  <flip-card-doctor>
+    <div class="bootstrap-wrapper">
+      <div class="container">
+        <div class="row box full-width">
+          <div class="col-lg-12">
+            <div class="row">
+              <div class="col-lg-6 box4 ">
+                <img src="../../../assets/images/doctor-login.png" alt="login" class="img" >
+              </div>
+              <div class="col-lg-6 box3">
+               
+                <div class="heading text-center mt70">Doctor Login Here!</div>
+                <form  #doctorLogin="ngForm" (ngSubmit)="onSubmitDoctor()">
+                <div class="row mt50">
+                  <div class="col-lg-12  field1">
+                    <mat-form-field appearance="outline" class="full-width ml40 mr40">
+                      <mat-label>Email</mat-label>
+                      <input 
+                      #email="ngModel"
+                      [(ngModel)]="doctor.email"
+                      name="email"
+                      required matInput placeholder="Email" >
+                      <mat-error *ngIf="email.errors?.['required']">Email is required</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row mt20">
+                  <div class="col-lg-12 field1">
+                    <mat-form-field appearance="outline" class="full-width ml40 mr40">
+                      <mat-label>Password</mat-label>
+                      <input 
+                      type="password"
+                      #password="ngModel"
+                      [(ngModel)]="doctor.password"
+                        name="password"
+                      required matInput placeholder="Password">
+                      <mat-error *ngIf="password.errors?.['required']">Password is required</mat-error>
+                    </mat-form-field>
+                  </div>
+                </div>
+                <div class="row mt20 mb10">
+                  <div class="col-lg-12 field1">
+                    <button [disabled]="doctorLogin.invalid" type="submit" mat-raised-button color="primary" class="btn full-width">Submit</button>
+                  </div>
+                </div>
+               
+              </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </flip-card-doctor>
+</flip-card>
+</div>

@@ -1,0 +1,72 @@
+/* 
+::ng-deep .mdc-data-table__cell > #waiting{
+    background-color: yellow !important;
+} */
+.example-container {
+    height: 400px;
+    width: 100%;
+    max-width: 100%;
+    overflow: auto;
+  }
+  
+  table {
+    width: 800px;
+  }
+  
+  td.mat-column-star {
+    width: 20px;
+    padding-right: 8px;
+  }
+  
+  th.mat-column-position, td.mat-column-position {
+    padding-left: 8px;
+  }
+  
+  .mat-mdc-table-sticky-border-elem-right {
+    border-left: 1px solid #e0e0e0;
+  }
+  
+  .mat-mdc-table-sticky-border-elem-left {
+    border-right: 1px solid #e0e0e0;
+  }
+
+
+.full-height{
+    overflow: hidden;
+    overflow-x: hidden;
+    height: 101vh;
+}
+
+#waiting{
+    color: orangered;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+
+#approved{
+    color: rgb(0, 155, 0);
+   font-weight: bold;
+   font-size: 17px;
+}
+
+#rejected{
+    color: rgb(155, 0, 0);
+   font-weight: bold;
+   font-size: 17px;
+}
+
+.table{
+    margin-left: 65px;
+    margin-top: 50px;
+}
+
+#search{
+    width: 100%;
+}
+
+.heading{
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+}

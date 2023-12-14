@@ -1,0 +1,59 @@
+.contact-info{
+    margin-top: 60px;
+    
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:visited {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+ }
+ a:active {
+    color: red;
+    background-color: transparent;
+ }
+ a:hover{
+    text-decoration: underline;
+ }
+
+ #contactUs{
+    background-color: #311B92;
+    filter:saturate(80%);
+    height: 60vh;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+.phone{
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+ ::ng-deep .mat-mdc-raised-button.mat-primary{
+    --mdc-protected-button-container-color: #311B92;
+
+}
+
+::ng-deep .material-icons{
+   font-size: 35px !important;
+}
+
+::ng-deep .mat-icon{
+    height: 100% !important;
+    width: 100% !important;
+}
+::ng-deep  #btn-contact >.mdc-button{
+   background-color:orangered !important;
+   width: 100%;
+    }
+
